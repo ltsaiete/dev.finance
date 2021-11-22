@@ -1,0 +1,36 @@
+:root {
+  --bg-color: #f0f2f5;
+  --dark-green: #2d4a22;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background: var(--dark-green);
+  padding: 2rem 0 10rem;
+  text-align: center;
+}
+
+header #logo {
+  color: var(--white);
+  font-weight: 100;
+}
+
+.container {
+  width: min(90vw, 800px);
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+}
