@@ -1,7 +1,9 @@
 :root {
   --bg-color: #f0f2f5;
   --dark-green: #2d4a22;
+  --green: #49aa26;
   --white: #fff;
+  --dark-blue: #363f5f;
 }
 
 * {
@@ -17,7 +19,7 @@ body {
 
 header {
   background: var(--dark-green);
-  padding: 2rem 0 10rem;
+  padding: 2rem 0 8rem;
   text-align: center;
 }
 
@@ -29,6 +31,45 @@ header #logo {
 .container {
   width: min(90vw, 800px);
   margin: auto;
+}
+
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-blue);
+  font-weight: 400;
+}
+
+#balance {
+  margin-top: -8rem;
+}
+
+#balance h2 {
+  color: var(--white);
+}
+
+.card {
+  background: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  color: var(--dark-blue);
+  margin-bottom: 2rem;
+}
+
+.card h3 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 2rem;
+  margin-top: 1rem;
+  line-height: 3rem;
+}
+
+.card.total {
+  background: var(--green);
+  color: var(--white);
 }
 
 footer {
