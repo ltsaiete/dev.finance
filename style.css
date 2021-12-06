@@ -4,6 +4,9 @@
   --green: #49aa26;
   --white: #fff;
   --dark-blue: #363f5f;
+  --light-blue: #969cb3;
+  --red: #e92929;
+  --dark-green: #12a454;
 }
 
 * {
@@ -72,6 +75,65 @@ h2 {
   color: var(--white);
 }
 
+#data-table {
+  width: 100%;
+
+  border-spacing: 0 0.5rem;
+  color: var(--light-blue);
+}
+
+table thead tr th:first-child {
+  border-radius: 0.25rem 0 0 0;
+}
+
+table thead tr th:last-child {
+  border-radius: 0 0.25rem 0 0;
+}
+
+table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 0.25rem;
+}
+
+table tbody tr:last-child td:last-child {
+  border-radius: 0 0 0.25rem 0;
+}
+
+table th {
+  background: var(--white);
+  font-weight: 400;
+
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+table tbody tr {
+  opacity: 0.7;
+}
+
+table tbody tr:hover {
+  opacity: 1;
+}
+
+table td {
+  background: var(--white);
+  padding: 1rem 2rem;
+}
+
+table td.description {
+  color: var(--dark-blue);
+}
+
+table td.expense {
+  color: var(--red);
+}
+
+table td.income {
+  color: var(--dark-green);
+}
+
 footer {
   text-align: center;
+  padding: 4rem 2rem;
+  color: var(--dark-blue);
+  opacity: 0.6;
 }
