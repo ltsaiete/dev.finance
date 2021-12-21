@@ -33,6 +33,8 @@ const Transaction = {
   all: transactions,
   add(transaction) {
     Transaction.all.push(transaction);
+
+    App.reload();
   },
   incomes() {
     let income = 0;
@@ -101,6 +103,10 @@ const DOM = {
       Transaction.total()
     );
   },
+
+  clearTransactions() {
+    DOM.transactionsContainer.innerHTML = "";
+  },
 };
 
 const Utils = {
@@ -119,8 +125,26 @@ const Utils = {
   },
 };
 
-transactions.forEach((transaction) => {
-  DOM.addTransaction(transaction);
-});
+const App = {
+  init() {
+    Transaction.all.forEach((transaction) => {
+      DOM.addTransaction(transaction);
+    });
 
-DOM.updateBalance();
+    DOM.updateBalance();
+  },
+
+  reload() {
+    DOM.clearTransactions();
+    App.init();
+  },
+};
+
+App.init();
+
+Transaction.add({
+  id: 4,
+  description: "Hello",
+  amount: -50000,
+  date: "23/01/2021",
+});
