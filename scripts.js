@@ -8,34 +8,35 @@ const Modal = {
   },
 };
 
-const transactions = [
-  {
-    id: 1,
-    description: "Luz",
-    amount: -50000,
-    date: "23/01/2021",
-  },
-  {
-    id: 2,
-    description: "Website",
-    amount: 500000,
-    date: "23/02/2021",
-  },
-  {
-    id: 3,
-    description: "Internet",
-    amount: -100000,
-    date: "23/01/2021",
-  },
-];
-
 const Transaction = {
-  all: transactions,
+  all: [
+    {
+      description: "Luz",
+      amount: -50000,
+      date: "23/01/2021",
+    },
+    {
+      description: "Website",
+      amount: 500000,
+      date: "23/02/2021",
+    },
+    {
+      description: "Internet",
+      amount: -100000,
+      date: "23/01/2021",
+    },
+  ],
   add(transaction) {
     Transaction.all.push(transaction);
 
     App.reload();
   },
+
+  remove(index) {
+    Transaction.all.splice(index, 1);
+    App.reload();
+  },
+
   incomes() {
     let income = 0;
 
@@ -109,6 +110,12 @@ const DOM = {
   },
 };
 
+const Form = {
+  submit(event) {
+    console.log(event);
+  },
+};
+
 const Utils = {
   formatCurrency(value) {
     const signal = value < 0 ? "-" : "";
@@ -141,10 +148,3 @@ const App = {
 };
 
 App.init();
-
-Transaction.add({
-  id: 4,
-  description: "Hello",
-  amount: -50000,
-  date: "23/01/2021",
-});
