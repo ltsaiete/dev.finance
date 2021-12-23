@@ -166,6 +166,10 @@ table td.income {
   color: var(--dark-green);
 }
 
+table td.remove img {
+  cursor: pointer;
+}
+
 footer {
   text-align: center;
   padding: 4rem 2rem;
