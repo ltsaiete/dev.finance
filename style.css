@@ -246,10 +246,10 @@ button:hover {
   background-color: var(--green);
 }
 
-.button.cancel {
+button.cancel {
   color: var(--red);
   border: 2px solid var(--red);
-
+  background: none;
   border-radius: 0.25rem;
   height: 50px;
 
@@ -260,7 +260,7 @@ button:hover {
   opacity: 0.4;
 }
 
-.button.cancel:hover {
+button.cancel:hover {
   opacity: 1;
 }
 
