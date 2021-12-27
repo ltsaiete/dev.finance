@@ -34,3 +34,8 @@ All the contributions are welcome, but you should follow this steps to contrinut
 After your PR has been merged, you can delete your branch.
 
 ## License
+This project is under the MIT License. check the file [LICENSE](https://github.com/ltsaiete/dev.finance/blob/main/LICENSE) for details.
+
+---
+
+Made by Luis Saiete. Find me on [Twitter](https://twitter.com/ltsaiete).
