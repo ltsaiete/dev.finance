@@ -1,13 +1,23 @@
-:root {
-  --bg-color: #f0f2f5;
-  --dark-green: #2d4a22;
-  --green: #49aa26;
-  --light-green: #3dd705;
-  --white: #fff;
-  --dark-blue: #363f5f;
-  --light-blue: #969cb3;
-  --red: #e92929;
-  --dark-green: #12a454;
+body {
+  --color-background: #f0f2f5;
+  --color-box-background: #fff;
+  --color-text-on-primary: #fff;
+  --color-primary: #49aa26;
+  --color-primary-dark: #2d4a22;
+  --color-text-title: #363f5f;
+  --color-text: #969cb3;
+  --color-red: #e92929;
+}
+
+body.dark-theme {
+  --color-background: #f0f2f5;
+  --color-box-background: #fff;
+  --color-text-on-primary: #fff;
+  --color-primary: #49aa26;
+  --color-primary-dark: #2d4a22;
+  --color-text-title: #363f5f;
+  --color-text: #969cb3;
+  --color-red: #e92929;
 }
 
 * {
@@ -21,12 +31,13 @@ html {
 }
 
 body {
-  background: var(--bg-color);
+  background: var(--color-background);
   font-family: "Poppins", sans-serif;
+  color: var(--color-text);
 }
 
 header {
-  background: var(--dark-green);
+  background: var(--color-primary-dark);
   padding: 2rem 0 8rem;
   text-align: center;
 }
@@ -39,7 +50,7 @@ header {
 h2 {
   margin-top: 3.2rem;
   margin-bottom: 0.8rem;
-  color: var(--dark-blue);
+  color: var(--color-text-title);
   font-weight: 400;
 }
 
@@ -60,14 +71,14 @@ h2 {
 }
 
 #balance h2 {
-  color: var(--white);
+  color: var(--color-text-title);
 }
 
 .card {
-  background: var(--white);
+  background: var(--color-box-background);
   padding: 1.5rem 2rem;
   border-radius: 0.25rem;
-  color: var(--dark-blue);
+  color: var(--color-text-title);
   margin-bottom: 2rem;
 }
 
@@ -86,17 +97,17 @@ h2 {
 }
 
 .card.total {
-  background: var(--green);
-  color: var(--white);
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
 }
 
 a {
-  color: var(--green);
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--light-green);
+  color: var(--color-primary-dark);
 }
 
 .button.new {
@@ -114,7 +125,7 @@ a:hover {
   width: 100%;
 
   border-spacing: 0 0.5rem;
-  color: var(--light-blue);
+  color: var(--color-text);
 }
 
 table thead tr th:first-child {
@@ -134,7 +145,7 @@ table tbody tr:last-child td:last-child {
 }
 
 table th {
-  background: var(--white);
+  background: var(--color-box-background);
   font-weight: 400;
 
   padding: 1rem 2rem;
@@ -150,20 +161,20 @@ table tbody tr:hover {
 }
 
 table td {
-  background: var(--white);
+  background: var(--color-box-background);
   padding: 1rem 2rem;
 }
 
 table td.description {
-  color: var(--dark-blue);
+  color: var(--color-text-title);
 }
 
 table td.expense {
-  color: var(--red);
+  color: var(--color-red);
 }
 
 table td.income {
-  color: var(--dark-green);
+  color: var(--color-primary-dark);
 }
 
 table td.remove img {
@@ -173,7 +184,7 @@ table td.remove img {
 footer {
   text-align: center;
   padding: 4rem 2rem;
-  color: var(--dark-blue);
+  color: var(--color-text-title);
   opacity: 0.6;
 }
 
@@ -198,7 +209,7 @@ footer {
 }
 
 .modal {
-  background: var(--bg-color);
+  background: var(--color-background);
   padding: 2.4rem;
   max-width: 500px;
   width: 90%;
@@ -206,6 +217,7 @@ footer {
 
 #form h2 {
   margin-top: 0;
+  color: var(--color-text-title);
 }
 
 .input-group {
@@ -236,10 +248,10 @@ input {
 
 button {
   height: 50px;
-  color: var(--white);
+  color: var(--color-text-on-primary);
   border: none;
 
-  background: var(--light-green);
+  background: var(--color-primary);
   padding: 0;
 
   border-radius: 0.25rem;
@@ -247,12 +259,12 @@ button {
 }
 
 button:hover {
-  background-color: var(--green);
+  background-color: var(--color-primary-dark);
 }
 
 button.cancel {
-  color: var(--red);
-  border: 2px solid var(--red);
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
   background: none;
   border-radius: 0.25rem;
   height: 50px;
