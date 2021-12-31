@@ -5,18 +5,20 @@ body {
   --color-primary: #49aa26;
   --color-primary-dark: #2d4a22;
   --color-text-title: #363f5f;
-  --color-text: #969cb3;
+  --color-text-base: #969cb3;
+  --color-text-amount: #49aa26;
   --color-red: #e92929;
 }
 
 body.dark-theme {
-  --color-background: #f0f2f5;
-  --color-box-background: #fff;
+  --color-background: #0a0906;
+  --color-box-background: #121214;
   --color-text-on-primary: #fff;
-  --color-primary: #49aa26;
-  --color-primary-dark: #2d4a22;
-  --color-text-title: #363f5f;
-  --color-text: #969cb3;
+  --color-primary: #8257e5;
+  --color-primary-dark: #28203e;
+  --color-text-title: #a8a8b3;
+  --color-text-base: #c4c4cc;
+  --color-text-income: #49aa26;
   --color-red: #e92929;
 }
 
@@ -33,7 +35,7 @@ html {
 body {
   background: var(--color-background);
   font-family: "Poppins", sans-serif;
-  color: var(--color-text);
+  color: var(--color-text-base);
 }
 
 header {
@@ -125,7 +127,6 @@ a:hover {
   width: 100%;
 
   border-spacing: 0 0.5rem;
-  color: var(--color-text);
 }
 
 table thead tr th:first-child {
@@ -174,7 +175,7 @@ table td.expense {
 }
 
 table td.income {
-  color: var(--color-primary-dark);
+  color: var(--color-text-income);
 }
 
 table td.remove img {
@@ -278,6 +279,27 @@ button.cancel {
 
 button.cancel:hover {
   opacity: 1;
+}
+
+.toggle-theme {
+  position: fixed;
+  right: 4%;
+  bottom: 4%;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  padding: 0.8rem;
+  background: var(--color-primary);
+}
+
+.toggle-theme button {
+  background: blue;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: url(./assets/sun.svg);
+  background-size: contain;
+  background-position: center;
 }
 
 @media (min-width: 800px) {
