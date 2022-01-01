@@ -13,7 +13,7 @@
     />
     <title>dev.finance$</title>
   </head>
-  <body>
+  <body onload="Theme.load()">
     <header>
       <img src="./assets/logo.svg" alt="logo dev.finance$" />
     </header>
@@ -121,6 +121,8 @@
     <footer class="container">
       <p>dev.finance$</p>
     </footer>
+
+    <button class="toggle-theme" onclick="Theme.toggle()"><div></div></button>
 
     <script src="./scripts.js"></script>
   </body>
