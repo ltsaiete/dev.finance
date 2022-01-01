@@ -8,27 +8,43 @@ const Modal = {
   },
 };
 
-const Theme = {
-  toggle() {
-    const theme = document.querySelector("body").classList.toggle("dark-theme");
-  },
-};
-
 const Storage = {
-  get() {
+  getTransactions() {
     return JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
   },
 
-  set(transactions) {
+  setTransactions(transactions) {
     localStorage.setItem(
       "dev.finances:transactions",
       JSON.stringify(transactions)
     );
   },
+
+  getTheme() {
+    return JSON.parse(localStorage.getItem("dev.finances:theme")) || "";
+  },
+
+  setTheme(theme) {
+    localStorage.setItem("dev.finances:theme", JSON.stringify(theme));
+  },
+};
+
+const Theme = {
+  theme: Storage.getTheme(),
+  toggle() {
+    const theme = document.querySelector("body").classList.toggle("dark-theme");
+    Storage.setTheme(theme);
+  },
+
+  load() {
+    if (Theme.theme) {
+      document.querySelector("body").classList.add("dark-theme");
+    }
+  },
 };
 
 const Transaction = {
-  all: Storage.get(),
+  all: Storage.getTransactions(),
   add(transaction) {
     Transaction.all.push(transaction);
 
@@ -211,7 +227,7 @@ const App = {
 
     DOM.updateBalance();
 
-    Storage.set(Transaction.all);
+    Storage.setTransactions(Transaction.all);
   },
 
   reload() {
