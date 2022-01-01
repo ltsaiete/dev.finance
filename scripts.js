@@ -8,6 +8,12 @@ const Modal = {
   },
 };
 
+const Theme = {
+  toggle() {
+    const theme = document.querySelector("body").classList.toggle("dark-theme");
+  },
+};
+
 const Storage = {
   get() {
     return JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
