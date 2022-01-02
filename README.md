@@ -13,6 +13,8 @@
 <a href="#license">License</a> | 
 </p>
 
+![Screenshot (18)](https://user-images.githubusercontent.com/56188470/147867472-50e0ea05-e2b2-401f-a1a9-313cd16bcb2c.png)
+
 ## Project
 dev.finance$ is an app that helps devs to manage their earnings and expenses and have a better view of it. 
 This app was created when I was participating at the was created when I was participating in the [Discover courses](https://app.rocketseat.com.br/dashboard) marathon by [Rocketseat](https://rocketseat.com.br/).
